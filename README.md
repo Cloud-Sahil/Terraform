@@ -118,5 +118,22 @@ Terraform has multiple **blocks** (building units):
      env = "dev"
    }
    ```
+---
+## Terraform 3 main stages (workflow steps):
+### 1. Init Stage (`terraform init`)
+ - Initializes the working directory
+ - Downloads required **providers** (AWS, Azure, etc.)
+ - Sets up backend (for state storage)
+ - Prepares Terraform to run
+
+### 2. Plan Stage (`terraform plan`)
+ - Creates an execution plan
+ - Shows what changes will be made (create/update/delete)
+ - Compares **current state vs desired state**
+
+### 3. Apply Stage (`terraform apply`)
+ - Executes the changes from the plan
+ - Creates/updates infrastructure
+ - Updates the **state file** (`.tfstate`)
 
 ---
