@@ -119,7 +119,7 @@ Terraform has multiple **blocks** (building units):
    }
    ```
 ---
-## Terraform 3 main stages (workflow steps):
+## Terraform stages (workflow steps):
 ### 1. Init Stage (`terraform init`)
  - Initializes the working directory
  - Downloads required **providers** (AWS, Azure, etc.)
@@ -135,5 +135,20 @@ Terraform has multiple **blocks** (building units):
  - Executes the changes from the plan
  - Creates/updates infrastructure
  - Updates the **state file** (`.tfstate`)
+
+### 4. Destroy (`terraform destroy`)
+ - Deletes all created infrastructure
+---
+
+## Difference between CloudFromation Vs Terraform
+
+| **Feature** | **CloudFormation** | **Terraform** | 
+|------------|------------------|-------------|
+| **Developer** | Amazon Web Services | HashiCorp | 
+| **Cloud Support** | AWS only | Multi-cloud (AWS, Azure, GCP, etc.) |
+| **Language** | JSON / YAML | HCL (HashiCorp Configuration Language) |
+| **Multi-Cloud Capability** | ❌ Not supported |  ✅ Strong support |
+| **State Management** | Managed by AWS (no local file needed) | Uses `.tfstate` file (local/remote) |
+| **Example** | Create EC2, S3 inside AWS only | Create AWS EC2 + Azure VM + GCP storage together |
 
 ---
