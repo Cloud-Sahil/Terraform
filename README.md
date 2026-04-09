@@ -1,3 +1,4 @@
 # Terraform 
-** - Infrastructure As Code
- - Open Source Code**
+ - **Infrastructure As Code**
+ - **Open Source Code**
+---
