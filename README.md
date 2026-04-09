@@ -16,7 +16,7 @@
   - Version-controlled → Stored in Git, so changes are trackable.  
   - Scalable → Easy to deploy infra across multiple environments (Dev, Test, Prod).  
 
-👉 Example: Instead of manually creating an EC2 in AWS Console, you write a Terraform file and just run `terraform apply`.
+     - Example: Instead of manually creating an EC2 in AWS Console, you write a Terraform file and just run `terraform apply`.
 
 ---
 
