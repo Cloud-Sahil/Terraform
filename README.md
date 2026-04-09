@@ -7,7 +7,7 @@
 
 # Infrastructure as Code (IAC) & Terraform Basics
 
-## 1. Introduction to IAC
+##  Introduction to IAC
 - **Definition**: IAC means writing **code** (instead of clicking manually in AWS/Azure GUI) to create and manage infrastructure like servers, networks, databases, etc.  
 - **Idea**: Just like you use code to build an app, you use code to build infrastructure.  
 - **Benefits**:  
@@ -20,7 +20,7 @@
 
 ---
 
-## 2. Why we need IAC (Difference between Shell Script, Ansible, and IAC tools like Terraform)
+##  Why we need IAC (Difference between Shell Script, Ansible, and IAC tools like Terraform)
 
 | **Aspect** | **Shell Script** | **Ansible** | **IAC Tool (Terraform)** |
 |------------|------------------|-------------|--------------------------|
@@ -38,7 +38,7 @@
 ---
 
 
-## 3. Terraform Language (Basic Syntax)
+##  Terraform Language (Basic Syntax)
 Terraform files are written in **HCL (HashiCorp Configuration Language)**.  
 
 Example:
@@ -61,7 +61,7 @@ resource "aws_instance" "my_ec2" {
 
 ---
 
-## 4. Enlist the Blocks used in Terraform Language
+##  Enlist the Blocks used in Terraform Language
 
 Terraform has multiple **blocks** (building units):  
 
