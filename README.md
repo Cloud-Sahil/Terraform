@@ -27,7 +27,7 @@
 | **Purpose** | Automates tasks (e.g., install software, copy files). | Config management + automation. | Full infra provisioning (VMs, networks, DBs). |
 | **State awareness** | No state awareness → runs blindly. | Limited state tracking. | Maintains **state file** → knows what exists and what needs change. |
 | **Idempotency** | ❌ No → may create duplicates. | ✅ Yes → ensures final state. | ✅ Yes → ensures infrastructure matches code. |
-| **Cloud support** | Not cloud-focused. | Supports cloud but mainly for config mgmt. | Designed for multi-cloud infra provisioning. |
+| **Cloud support** | No direct support | Limited (via modules/plugins) | Strong (AWS, Azure, GCP, etc.)|
 | **Example** | Bash script: `apt-get install nginx` | Ansible Playbook to install Nginx | Terraform code to create EC2 + attach security group + install Nginx |
 
 - In short:  
