@@ -94,25 +94,25 @@ Terraform has multiple **blocks** (building units):
    }
    ```
 
-5. **module** → Group of Terraform files reused as a package.  
+5. **data** → Fetch existing info (e.g., latest AMI).  
+   ```hcl
+   data "aws_ami" "latest" {
+     most_recent = true
+     owners      = ["amazon"]
+   }
+   ```
+
+6. **module** → Group of Terraform files reused as a package.  
    ```hcl
    module "vpc" {
      source = "./modules/vpc"
    }
    ```
 
-6. **locals** → Define local variables.  
+7. **locals** → Define local variables.  
    ```hcl
    locals {
      env = "dev"
-   }
-   ```
-
-7. **data** → Fetch existing info (e.g., latest AMI).  
-   ```hcl
-   data "aws_ami" "latest" {
-     most_recent = true
-     owners      = ["amazon"]
    }
    ```
 
