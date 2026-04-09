@@ -49,7 +49,7 @@ provider "aws" {
 
 resource "aws_instance" "my_ec2" {
   ami           = "ami-12345678"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 }
 ```
 
@@ -76,7 +76,7 @@ Terraform has multiple **blocks** (building units):
    ```hcl
    resource "aws_instance" "example" {
      ami           = "ami-12345"
-     instance_type = "t2.micro"
+     instance_type = "t3.micro"
    }
    ```
 
