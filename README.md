@@ -25,6 +25,7 @@
 | **Aspect** | **Shell Script** | **Ansible** | **IAC Tool (Terraform)** |
 |------------|------------------|-------------|--------------------------|
 | **Purpose** | Automates tasks (e.g., install software, copy files). | Config management + automation. | Full infra provisioning (VMs, networks, DBs). |
+| **Scalability** | Low | High | Very High
 | **State awareness** | No state awareness → runs blindly. | Limited state tracking. | Maintains **state file** → knows what exists and what needs change. |
 | **Idempotency** |  No → may create duplicates. |  Yes → ensures final state. |  Yes → ensures infrastructure matches code. |
 | **Cloud support** | No direct support | Limited (via modules/plugins) | Strong (AWS, Azure, GCP, etc.)|
