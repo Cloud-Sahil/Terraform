@@ -7,7 +7,7 @@
 
 # Infrastructure as Code (IAC) & Terraform Basics
 
-##  Introduction to IAC
+##   - Introduction to IAC
 - **Definition**: IAC means writing **code** (instead of clicking manually in AWS/Azure GUI) to create and manage infrastructure like servers, networks, databases, etc.  
 - **Idea**: Just like you use code to build an app, you use code to build infrastructure.  
 - **Benefits**:  
