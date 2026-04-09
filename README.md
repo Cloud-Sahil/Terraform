@@ -30,10 +30,10 @@
 | **Cloud support** | Not cloud-focused. | Supports cloud but mainly for config mgmt. | Designed for multi-cloud infra provisioning. |
 | **Example** | Bash script: `apt-get install nginx` | Ansible Playbook to install Nginx | Terraform code to create EC2 + attach security group + install Nginx |
 
-👉 In short:  
-- **Shell Script** = manual automation.  
-- **Ansible** = config management & software deployment.  
-- **Terraform (IAC)** = provisioning complete infra in a controlled, declarative way.  
+- In short:  
+ - **Shell Script** = manual automation.  
+ - **Ansible** = config management & software deployment.  
+ - **Terraform (IAC)** = provisioning complete infra in a controlled, declarative way.  
 
 ---
 
@@ -57,7 +57,7 @@ resource "aws_instance" "my_ec2" {
 - **Resource** → Defines what infra you want (EC2, VPC, S3, etc.).  
 - **Arguments** → Settings inside resources (`ami`, `instance_type`).  
 
-👉 It’s **declarative** → you say *what you want*, Terraform figures out *how to do it*.  
+  - It’s **declarative** → you say *what you want*, Terraform figures out *how to do it*.  
 
 ---
 
