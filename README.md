@@ -30,6 +30,7 @@
 | **State awareness** | No state awareness → runs blindly. | Limited state tracking. | Maintains **state file** → knows what exists and what needs change. |
 | **Idempotency** |  No → may create duplicates. |  Yes → ensures final state. |  Yes → ensures infrastructure matches code. |
 | **Cloud support** | No direct support | Limited (via modules/plugins) | Strong (AWS, Azure, GCP, etc.)|
+| **Best For** | Quick scripts | Config management | Infrastructure automation |
 | **Example** | Bash script: `apt-get install nginx` | Ansible Playbook to install Nginx | Terraform code to create EC2 + attach security group + install Nginx |
 
 - In short:  
