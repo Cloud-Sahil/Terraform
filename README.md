@@ -31,9 +31,9 @@
 | **Example** | Bash script: `apt-get install nginx` | Ansible Playbook to install Nginx | Terraform code to create EC2 + attach security group + install Nginx |
 
 - In short:  
- - **Shell Script** = manual automation.  
- - **Ansible** = config management & software deployment.  
- - **Terraform (IAC)** = provisioning complete infra in a controlled, declarative way.  
+  - **Shell Script** = manual automation.  
+  - **Ansible** = config management & software deployment.  
+  - **Terraform (IAC)** = provisioning complete infra in a controlled, declarative way.  
 
 ---
 
