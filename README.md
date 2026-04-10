@@ -47,11 +47,11 @@ Terraform files are written in **HCL (HashiCorp Configuration Language)**.
 Example:
 ```hcl
 provider "aws" {
-  region = "us-east-1"  # Replace with your desired AWS region
+  region = "ap-south-1"  # Replace with your desired AWS region
 }
 
 resource "aws_instance" "my-ec2" {
-  ami           = "ami-12345678"
+  ami           = "ami-05d2d839d4f73aafb"
   instance_type = "t3.micro"
 }
 ```
