@@ -16,7 +16,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashi
 sudo apt update && sudo apt install terraform
 ```
  - "+" resource to be created
- - "-" resorce to be deleted
+ - "-" resource to be deleted
  - "~" resource to be chnage
 ### Install AWS Cli
 ```hcl
