@@ -49,7 +49,7 @@ resource "aws_instance" "my-ec2" {
   }
 }
 ```
-### Intitlize terraform in currnt directory
+### Intitlize terraform in current directory
 ```hcl
 terraform init
 ```
