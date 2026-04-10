@@ -47,7 +47,7 @@ Terraform files are written in **HCL (HashiCorp Configuration Language)**.
 Example:
 ```hcl
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-1"  # Replace with your desired AWS region
 }
 
 resource "aws_instance" "my-ec2" {
@@ -71,7 +71,7 @@ Terraform has multiple **blocks** (building units):
 1. **provider** → Defines the provider (AWS, Azure, etc.)  
    ```hcl
    provider "aws" {
-     region = "us-east-1"
+     region = "us-east-1"  # Replace with your desired AWS region
    }
    ```
 
@@ -86,7 +86,7 @@ Terraform has multiple **blocks** (building units):
 3. **variable** → Input values (like parameters).  
    ```hcl
    variable "region" {
-     default = "us-east-1"
+     default = "us-east-1"   # Replace with your desired AWS region
    }
    ```
 
