@@ -17,7 +17,7 @@ sudo apt update && sudo apt install terraform
 ```
  - "+" resource to be created
  - "-" resource to be deleted
- - "~" resource to be chnage
+ - "~" resource to be change
 ### Install AWS Cli
 ```hcl
 snap install aws-cli --classic
@@ -49,3 +49,28 @@ resource "aws_instance" "my-ec2" {
   }
 }
 ```
+### Intitlize terraform in currnt directory
+```hcl
+terraform init
+```
+### Gives blueprint of resources which are going to be create
+```hcl
+terraform plan
+```
+### Validate the code
+```hcl
+terraform validate
+```
+### Gives allingment to terraform.tf files
+```hcl
+terraform fmt
+```
+### Apply change and approve them
+```hcl
+terraform apply --auto-approve
+```
+### Delete
+```hcl
+terraform destroy
+```
+---
