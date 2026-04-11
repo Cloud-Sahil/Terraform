@@ -67,3 +67,28 @@ resource "aws_vpc_security_group_egress_rule" "egress-tg" {
   ip_protocol       = "-1" # semantically equivalent to all ports
 }
 ```
+### Intitlize terraform in current directory
+```hcl
+terraform init
+```
+### Gives blueprint of resources which are going to be create
+```hcl
+terraform plan
+```
+### Validate the code
+```hcl
+terraform validate
+```
+### Gives allingment to terraform.tf files
+```hcl
+terraform fmt
+```
+### Apply change and approve them
+```hcl
+terraform apply --auto-approve
+```
+### Delete
+```hcl
+terraform destroy
+```
+---
