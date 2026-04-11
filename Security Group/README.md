@@ -28,3 +28,43 @@ aws configure
 ```
  - Access key ID
  - Secret access key
+### Write tf.file
+```hcl
+nano sg.tf
+```
+```hcl
+provider "aws" {
+  region = "ap-south-1" # Replace with your desired AWS region
+}
+resource "aws_security_group" "newsg" {
+  description = "Allow http and ssh pots inbound traffic and all outbound traffic"
+  vpc_id      = "vpc-028aec56b3680bb0e"
+  tags = {
+    Name = "new-sg"
+  }
+}
+
+
+resource "aws_vpc_security_group_ingress_rule" "test-sg" {
+  security_group_id = aws_security_group.newsg.id
+  cidr_ipv4         = "172.31.0.0/16"
+  from_port         = 80
+  ip_protocol       = "tcp"
+  to_port           = 80
+}
+
+resource "aws_vpc_security_group_ingress_rule" "sshest-sg" {
+  security_group_id = aws_security_group.newsg.id
+  cidr_ipv4         = "172.31.0.0/16"
+  from_port         = 21
+  ip_protocol       = "tcp"
+  to_port           = 22
+}
+```
+
+
+resource "aws_vpc_security_group_egress_rule" "egress-tg" {
+  security_group_id = aws_security_group.newsg.id
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = "-1" # semantically equivalent to all ports
+}
