@@ -119,7 +119,7 @@ Terraform has multiple **blocks** (building units):
    }
    ```
 ---
-## Terraform stages (workflow steps):
+## Terraform stages (workflow steps) & Lifecycle =
 ### 1. Init Stage (`terraform init`)
  - Initializes the working directory
  - Downloads required **providers** (AWS, Azure, etc.)
@@ -127,8 +127,7 @@ Terraform has multiple **blocks** (building units):
  - Prepares Terraform to run
 
 ### 2. Plan Stage (`terraform plan`)
- - Creates an execution plan
- - Shows what changes will be made (create/update/delete)
+ - blueprint of infra after apply
  - Compares **current state vs desired state**
 
 ### 3. Apply Stage (`terraform apply`)
