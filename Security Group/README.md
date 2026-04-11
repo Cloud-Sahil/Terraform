@@ -38,7 +38,7 @@ provider "aws" {
 }
 resource "aws_security_group" "newsg" {
   description = "Allow http and ssh pots inbound traffic and all outbound traffic"
-  vpc_id      = "vpc-028aec56b3680bb0e"
+  vpc_id      = "vpc-028aec56b3680bb0e"   # Replace with your default vpc id
   tags = {
     Name = "new-sg"
   }
