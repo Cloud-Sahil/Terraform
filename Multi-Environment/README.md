@@ -195,7 +195,7 @@ Output
 Terraform provides three primary looping mechanisms: `count`, `for_each`, and `for`.
 Each serves a different purpose and should be chosen carefully based on the use case.
 
-**| Feature / Aspect | `count` | `for_each` | `for` Expression |**
+| Feature / Aspect | `count` | `for_each` | `for` Expression |
 |--------|----------|--------|
 | Loop Type	| Meta-argument |	Meta-argument |	Expression|
 | Input Type	| Number |	Map or Set	| List, Map, or Set|
