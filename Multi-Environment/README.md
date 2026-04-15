@@ -51,3 +51,23 @@ Tags automatically change based on environment
 
 ### 2️. variables.tf
 Declares reusable input variables.
+```hcl
+variable "instance_type" {
+  description = "EC2 instance type per environment"
+  type        = string
+}
+```
+### 3️. Environment-Specific .tfvars
+Each environment overrides only required values.
+- workspace/dev.tfvars
+```hcl
+instance_type = "t2.micro"
+```
+- workspace/stage.tfvars
+```hcl
+instance_type = "t3.small"
+```
+ - workspace/prod.tfvars
+```hcl
+instance_type = "t3.medium"
+```
