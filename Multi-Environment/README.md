@@ -213,3 +213,25 @@ Each serves a different purpose and should be chosen carefully based on the use 
  - Use **`count`** only for simple, identical resources
  - Use **`for`** **expressions** for transforming and filtering data
 ---
+## Commands 
+```hcl
+terraform workspace new dev
+terraform workspace new stage
+terraform workspace new prod
+terraform workspace list
+nano main.tf
+nano variable.tf
+mkdir workspace
+cd workspace/
+nano dev.tfvars   # Instances Type
+nano stage.tfvars   # Instances Type
+nano prod.tfvars   # Instances Type
+cd
+terraform workspace list
+terraform workspace select dev
+terraform apply -var-file ="workspace/dev.tfvars"
+terraform workspace select stage
+terraform apply -var-file ="workspace/stage.tfvars"
+terraform workspace select prod
+terraform apply -var-file ="workspace/prod.tfvars"
+```
