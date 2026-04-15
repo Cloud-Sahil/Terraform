@@ -59,15 +59,42 @@ variable "instance_type" {
 ```
 ### 3️. Environment-Specific .tfvars
 Each environment overrides only required values.
-- workspace/dev.tfvars
+- **workspace/dev.tfvars**
 ```hcl
 instance_type = "t2.micro"
 ```
-- workspace/stage.tfvars
+- **workspace/stage.tfvars**
 ```hcl
 instance_type = "t3.small"
 ```
- - workspace/prod.tfvars
+ - **workspace/prod.tfvars**
 ```hcl
 instance_type = "t3.medium"
 ```
+### 4. Terraform Workflow Commands
+- **Initialize Terraform**
+```hcl
+terraform init
+```
+- **Create Workspaces**
+```hcl
+terraform workspace new dev
+terraform workspace new stage
+terraform workspace new prod
+```
+- **Deploy Dev Environment**
+```hcl
+terraform workspace select dev
+terraform apply -var-file="workspace/dev.tfvars"
+```
+- **Deploy Stage Environment**
+```hcl
+terraform workspace select stage
+terraform apply -var-file="workspace/stage.tfvars"
+```
+- **Deploy Prod Environment**
+```hcl
+terraform workspace select prod
+terraform apply -var-file="workspace/prod.tfvars"
+```
+`Each workspace has a separate state file, preventing cross-environment conflicts.`
