@@ -28,3 +28,26 @@ ec2-multi-env/
 │   ├── stage.tfvars
 │   └── prod.tfvars
 ```
+### 1️ main.tf
+Defines the AWS provider and EC2 resource. The same code runs in all environments.
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "my_ec2" {
+  ami           = "ami-08c40ec9ead489470" # Amazon Linux 2 AMI
+  instance_type = var.instance_type
+
+  tags = {
+    Name = "ec2-${terraform.workspace}"
+    Env  = terraform.workspace
+  }
+}
+```
+**Explanation** terraform.workspace dynamically identifies the active environment
+
+Tags automatically change based on environment
+
+### 2️. variables.tf
+Declares reusable input variables.
