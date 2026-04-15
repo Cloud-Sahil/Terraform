@@ -195,17 +195,18 @@ Output
 Terraform provides three primary looping mechanisms: `count`, `for_each`, and `for`.
 Each serves a different purpose and should be chosen carefully based on the use case.
 
-| Feature / Aspect | `count` | `for_each` | `for` Expression |
-|--------|----------|--------|
-| Loop Type	| Meta-argument |	Meta-argument |	Expression|
-| Input Type	| Number |	Map or Set	| List, Map, or Set|
-| Purpose|	Create identical resources	| Create unique resources	| Transform or filter data|
-| Resource Creation|	Yes	| Yes	| No |
-| Resource Addressing|	Index-based (`[0]`, `[1]`)	| Key-based `([\"dev\"])`| 	Not applicable|
-| Stability|	Less stable |	Highly stable	| Stable|
-| Best Use Case|	Same config, fixed quantity |	Real-world infrastructure	| Outputs, locals, variables|
-| Recommended for Prod|	Avoid when possible |	Yes	| Yes|
-| Example Usage|	EC2 instances scaling |	Env-based resources	| Data transformation|
+| Feature / Aspect         | `count`                     | `for_each`                | `for` Expression           |
+| ------------------------ | --------------------------- | ------------------------- | -------------------------- |
+| **Loop Type**            | Meta-argument               | Meta-argument             | Expression                 |
+| **Input Type**           | Number                      | Map or Set                | List, Map, or Set          |
+| **Purpose**              | Create identical resources  | Create unique resources   | Transform or filter data   |
+| **Resource Creation**    | Yes                         | Yes                       | No                         |
+| **Resource Addressing**  | Index-based (`[0]`, `[1]`)  | Key-based (`["dev"]`)     | Not applicable             |
+| **Stability**            | Less stable                 | Highly stable             | Stable                     |
+| **Best Use Case**        | Same config, fixed quantity | Real-world infrastructure | Outputs, locals, variables |
+| **Recommended for Prod** | Avoid when possible         | Yes                       | Yes                        |
+| **Example Usage**        | EC2 instances scaling       | Env-based resources       | Data transformation        |
+
 
 #### Recommendation
  - Use **`for_each`** for most real-world infrastructure
