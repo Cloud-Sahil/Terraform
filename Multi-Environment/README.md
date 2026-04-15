@@ -32,11 +32,11 @@ ec2-multi-env/
 Defines the AWS provider and EC2 resource. The same code runs in all environments.
 ```hcl
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"  # Replace with your desired AWS region
 }
 
 resource "aws_instance" "my-ec2" {
-  ami           = "ami-05d2d839d4f73aafb"  # Amazon Linux 2 AMI
+  ami           = "ami-05d2d839d4f73aafb"  
   instance_type = var.instance_type
 
   tags = {
