@@ -207,8 +207,8 @@ Each serves a different purpose and should be chosen carefully based on the use 
 | **Recommended for Prod** | Avoid when possible         | Yes                       | Yes                        |
 | **Example Usage**        | EC2 instances scaling       | Env-based resources       | Data transformation        |
 
-
-#### Recommendation
+---
+### Recommendation
  - Use **`for_each`** for most real-world infrastructure
  - Use **`count`** only for simple, identical resources
  - Use **`for`** **expressions** for transforming and filtering data
