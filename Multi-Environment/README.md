@@ -35,8 +35,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "my_ec2" {
-  ami           = "ami-08c40ec9ead489470" # Amazon Linux 2 AMI
+resource "aws_instance" "my-ec2" {
+  ami           = "ami-05d2d839d4f73aafb"  # Amazon Linux 2 AMI
   instance_type = var.instance_type
 
   tags = {
