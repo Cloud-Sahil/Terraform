@@ -19,3 +19,12 @@ This is a **production-grade DevOps pattern** used to avoid code duplication and
 ---
 
 ## **Project Structure**
+```hcl
+ec2-multi-env/
+├── main.tf
+├── variables.tf
+├── workspace/
+│   ├── dev.tfvars
+│   ├── stage.tfvars
+│   └── prod.tfvars
+```
