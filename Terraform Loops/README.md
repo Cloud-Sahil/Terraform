@@ -1,7 +1,7 @@
 # Terraform Loops
 Terraform supports multiple looping mechanisms to create and manage resources efficiently.
 
-## 1️. count
+## 1️. `count`
 Creates multiple identical resources using a numeric value.
 
 **Best Use**
@@ -26,7 +26,7 @@ aws_instance.example[2]
 ```
 `Index-based addressing may cause issues if resources are removed.`
 
-## 2️. for_each
+## 2️. `for_each`
 Creates resources from a map or set with stable identifiers.
 
 **Best Use**
@@ -60,7 +60,7 @@ aws_s3_bucket.example["prod"]
 ```
 `Preferred over count in real-world infrastructure.`
 
-## 3️. for 
+## 3️. `for`
 Used to transform or filter data, not create resources.
 
 **Transform Example**
