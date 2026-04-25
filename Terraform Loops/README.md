@@ -1,4 +1,4 @@
-# Terraform Loops
+# Terraform Loops & Commands
 Terraform supports multiple looping mechanisms to create and manage resources efficiently.
 
 ## 1️. `count`
