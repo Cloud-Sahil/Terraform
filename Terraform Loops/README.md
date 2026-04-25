@@ -110,3 +110,55 @@ Each serves a different purpose and should be chosen carefully based on the use 
  - Use **`count`** only for simple, identical resources
  - Use **`for`** **expressions** for transforming and filtering data
 ---
+#  Terraform Commands
+
+## 1. **Taint Command**
+The `taint` command marks a resource for recreation during the next `terraform apply`. This is useful when a specific resource needs to be replaced without altering the rest of the infrastructure.
+
+### **Syntax:**
+```bash
+terraform taint <resource_name>
+```
+
+### **Example:**
+```bash
+terraform taint aws_instance.my_instance
+```
+This marks the `aws_instance.my_instance` resource for recreation.
+
+
+## Terraform command 
+### `terraform taint` command --> `terraform replace` command command is used v0.15.2
+- if you have made lots of manual changes to terraform /delete / recrete resources
+- `terraform apply -replace "aws_instance.my-ec2"` --> to distroy and create an new ec2 instance of privious version that terraform had 
+
+---
+
+## 2. **Import Command**
+The `import` command allows importing existing infrastructure resources into Terraform state. This is helpful when managing resources created outside of Terraform.
+
+### **Syntax:**
+```bash
+terraform import <resource_type>.<resource_name> <resource_id>
+```
+
+### **Example:**
+```bash
+terraform import aws_instance.my_instance i-qwe12345
+```
+This imports the AWS EC2 instance with ID `i-qwe12345` into Terraform as `aws_instance.my_instance`.
+
+---
+
+## 3. **Destroy Command**
+The `destroy` command removes all resources defined in the configuration.
+
+### **Targeted Destroy (-t)**
+You can destroy specific resources using the `-target` flag.
+
+### **Syntax:**
+```bash
+terraform destroy -target=<resource_type>.<resource_name>
+```
+
+---
