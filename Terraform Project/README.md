@@ -273,3 +273,26 @@ mv ./kubectl ~/.local/bin/kubectl
 ```sh
 kubectl version --client
 ```
+### IAM Role for EC2
+ - create role:
+ - Attach IAM role with your EC2
+ - Add policy (name) - eks
+   - 1. AdministratorAccess
+   - 2. AmazonEKS_CNI_Policy
+   - 3. AmazonEKSBlockStoragePolicy
+   - 4. AmazonEKSClusterPolicy
+   - 5. AmazonEKSComputePolicy
+   - 6. AmazonEKSDashboardConsoleReadOnlyAccess
+   - 7. AmazonEKSFargatePodExecutionRolePolicy
+   - 8. AmazonEKSLoadBalancingPolicy
+   - 9. AmazonEKSLocalOutpostClusterPolicy
+   - 10. AmazonEKSNetworkingPolicy
+ - go to EC2 click on actions
+ - security
+ - modify IAM role option
+ - modify IAM role
+ - Update IAM role
+```sh
+ls
+```
+ 
