@@ -360,5 +360,12 @@ spec:
 ```sh
 kubectl get all
 ```
-copy the load balancer ingress and paste it on browser and your game is running
-
+#### copy the load balancer ingress and paste it on browser and your game is running
+#### navigate to EKS-TF dir to delete infra
+```sh
+cd EKS-TF
+```
+Delete infra
+```sh
+terraform destroy -auto-approve
+```
