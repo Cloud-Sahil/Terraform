@@ -237,3 +237,39 @@ terraform {
   }
 }
 ```
+```sh
+terraform --version
+```
+#### AWS Cli
+```sh
+snap install aws-cli --classic
+```
+```sh
+aws configure --profile eks
+```
+#### Docker Install
+```sh
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo usermod -aG docker ubuntu
+newgrp docker
+docker --version
+```
+#### Install Kubectl
+Download the latest release with the command:
+```sh
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+Install kubectl:
+```sh
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+Note: If you do not have root access on the target system, you can still install kubectl to the ~/.local/bin directory:
+```sh
+chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+```
+```sh
+kubectl version --client
+```
