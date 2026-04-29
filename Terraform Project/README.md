@@ -1,4 +1,5 @@
-# Terraform Project
+# Terraform Project: 🎮  Super Mario Bros 🍄🐢
+---
 ## 1. EC2 (Elastic Compute Cloud)
 
 . Launch instance
