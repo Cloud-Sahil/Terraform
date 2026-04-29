@@ -44,3 +44,8 @@ sudo apt update -y
 sudo apt install terraform
 
 ```
+###  Clone the GitHub Repository
+```sh
+git clone <GitHub_Repository_Link>
+```
+#### Example: git clone https://github.com/mukundDeo9325/Super-Mario.git
