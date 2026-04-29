@@ -295,4 +295,70 @@ kubectl version --client
 ```sh
 ls
 ```
- 
+```sh
+terraform init
+```
+```sh
+terraform plan
+```
+```sh
+terraform apply -auto-approve
+```
+```sh
+ls
+```
+```sh
+cd ..
+```
+```sh
+ls
+```
+```sh
+aws eks update-kubeconfig --name EKS_CLOUD --region ap-south-1 --profile eks
+```
+```sh
+kubectl apply -f deployment.yaml
+```
+```sh
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mario-deployment
+spec:
+  replicas: 2  # You can adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: mario
+  template:
+    metadata:
+      labels:
+        app: mario
+    spec:
+      containers:
+      - name: mario-container
+        image: mukunddeo9325/super-mario
+        ports:
+        - containerPort: 80
+```
+```sh
+kubectl apply -f service.yaml
+```
+```sh
+apiVersion: v1
+kind: Service
+metadata:
+  name: mario-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: mario
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+```
+```sh
+kubectl get all
+```
+copy the load balancer ingress and paste it on browser and your game is running
+
