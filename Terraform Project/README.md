@@ -16,13 +16,31 @@
 
 ## 2. Commands =
 
-### 1. Switch to root user
+###  Switch to root user
 ```sh
 sudo -i
 ```
 
 
-### 2. Update the instance
+###  Update the instance
 ```sh
 apt update
+```
+### Terraform installation 
+
+```sh
+wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+```
+## update the repo and install the terraform 
+```bash
+sudo nano /etc/apt/sources.list.d/hashicorp.list
+```
+```bash
+deb [arch=amd64 signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com jammy main
+```
+```bash
+sudo apt update -y
+sudo apt install terraform
+
 ```
