@@ -4,7 +4,11 @@ HEREDOC **(Here Document)** is a multi-line string syntax in Terraform used to d
 
 ### Example with UserData
 Below is an example of using HEREDOC within an EC2 instance resource:
-
+```hcl
+provider "aws" {
+  region = "ap-south-1"  # Replace with your desired AWS region
+}
+```
 ```hcl
 resource "aws_instance" "web_server" {
   ami           = "ami-12345678" # Your AMI ID
