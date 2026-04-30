@@ -7,8 +7,8 @@ Below is an example of using HEREDOC within an EC2 instance resource:
 
 ```hcl
 resource "aws_instance" "web_server" {
-  ami           = "ami-12345678"
-  instance_type = "t2.micro"
+  ami           = "ami-12345678" # Your AMI ID
+  instance_type = "t3.micro"
 
   user_data = <<-EOF
     #!/bin/bash
