@@ -360,7 +360,7 @@ spec:
 ```sh
 kubectl get all
 ```
-#### Go To Load Balancer & S.G - Inbound rules edit
+#### Go To Load Balancer S.G - Inbound rules edit
 #### copy the load balancer ingress and paste it on browser and your game is running
 #### navigate to EKS-TF dir to delete infra
 ```sh
