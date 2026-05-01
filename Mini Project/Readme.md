@@ -1,10 +1,10 @@
 # Mini Project
- - AutoScalingGroups (ASG)
- - Ec2
- - Load Balancer (ALB)
- - Launch Templates
- - Target Groups (with health checks)
- - Scaling Policies
+ - EC2
+ - Security Groups
+ - launch Templates
+ - Target Groups
+ - ALB
+ Auto Scalling groups (ASG)
 ---
 ## Create EC2 In.
 ---
