@@ -212,8 +212,8 @@ terraform plan
 terraform apply
 ```
 #### GO to ALB - DNS Copy & Paste New tab 
-`/` - home
-`/cloth/` - cloth
+ - `/` - home page
+ - `/cloth/` - cloth page
 ### Destroy Commands
 ```hcl
 terraform destroy -auto-approve
