@@ -12,14 +12,12 @@
 
 . Launch instance
 
- < OR
- 
- . EKS Cluster
+## 2. EKS Cluster
  
 ---
 
 
-## 2. Commands =
+## 3. Commands =
 
 ###  Switch to root user
 ```sh
@@ -145,7 +143,7 @@ data "aws_subnets" "public" {
 # -------------------------
 
 resource "aws_eks_cluster" "example" {
-  name     = "EKS_CLOUD"
+  name     = "EKS-CLOUD"
   role_arn = aws_iam_role.example.arn
 
   # Attach cluster to VPC subnets
@@ -318,7 +316,7 @@ cd ..
 ls
 ```
 ```sh
-aws eks update-kubeconfig --name EKS_CLOUD --region ap-south-1 --profile eks
+aws eks update-kubeconfig --name EKS-CLOUD --region ap-south-1 --profile eks
 ```
 ```sh
 kubectl apply -f deployment.yaml
