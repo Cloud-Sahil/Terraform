@@ -51,7 +51,7 @@ sudo apt install terraform
 ```sh
 git clone <GitHub_Repository_Link>
 ```
-#### Example: git clone https://github.com/Cloud-Sahil/Super-Mario.git
+#### Example: git clone https://github.com/mukunddeo9325/Super-Mario.git
 ```sh
 cd <GitHub_Repository_Name>/
 ```
