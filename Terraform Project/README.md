@@ -12,6 +12,9 @@
 
 . Launch instance
 
+< OR
+ . EKS Cluster
+ 
 ---
 
 
