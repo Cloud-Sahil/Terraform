@@ -257,7 +257,7 @@ sudo usermod -aG docker ubuntu
 newgrp docker
 docker --version
 ```
-#### Install eksctl 
+#### Install eksctl CLI tool for creating EKS Clusters on AWS**
 - https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 
 
@@ -272,6 +272,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 ```` 
 eksctl version
 ````
+
 
 #### Install Kubectl
 Download the latest release with the command:
