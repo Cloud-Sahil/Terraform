@@ -327,13 +327,13 @@ terraform apply -auto-approve
 ls
 ```
 ```sh
+aws eks update-kubeconfig --name EKS-CLOUD --region ap-south-1 --profile eks
+```
+```sh
 cd ..
 ```
 ```sh
 ls
-```
-```sh
-aws eks update-kubeconfig --name EKS-CLOUD --region ap-south-1 --profile eks
 ```
 ```sh
 kubectl apply -f deployment.yaml
