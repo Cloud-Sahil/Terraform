@@ -284,7 +284,7 @@ kubectl version --client
    - 3. AmazonEKSBlockStoragePolicy
    - 4. AmazonEKSClusterPolicy
    - 5. AmazonEKSComputePolicy
-   - 6. AmazonEKSDashboardConsoleReadOnlyAccess
+   - 6. AmazonEKSDashboardConsoleReadOnly
    - 7. AmazonEKSFargatePodExecutionRolePolicy
    - 8. AmazonEKSLoadBalancingPolicy
    - 9. AmazonEKSLocalOutpostClusterPolicy
