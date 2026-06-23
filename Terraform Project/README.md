@@ -327,7 +327,7 @@ terraform apply -auto-approve
 ls
 ```
 ```sh
-aws eks update-kubeconfig --name EKS-CLOUD --region ap-south-1 --profile eks
+aws eks update-kubeconfig --name EKS_CLOUD --region ap-south-1 --profile eks
 ```
 ```sh
 cd ..
